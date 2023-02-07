@@ -1,0 +1,168 @@
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+window:
+  opacity: 0.93
+
+# Font configuration
+font:
+  normal:
+    family: JetBrainsMono Nerd Font Mono
+    # family: FantasqueSansMono Nerd Font Mono
+    # style: Light
+
+  # possible to use different font families for bold/italic variants
+  # bold:
+  #   # family: Roboto Mono for Powerline
+  #   style: SemiBold
+  #
+  # italic:
+  #   # family: JetBrainsMono
+  #   style: Italic
+
+  bold_italic:
+    family: FantasqueSansMono Nerd Font Mono
+    style: Italic
+
+  # Point size
+  size: 9
+
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 2
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the right,
+  # increasing `y` moves the glyph upwards.
+  glyph_offset:
+    x: 0
+    y: 2
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  # - { key: Return,      action: None           }
+  #- { key: C,        mods: Control|Shift, action: Copy             }
+  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
+  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals, mods: Control, action: ResetFontSize }
+  - { key: Plus, mods: Control|Shift, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+
+schemes:
+  # Tokyo Night theme, based on both:
+  # https://github.com/ghifarit53/tokyonight-vim
+  # https://github.com/enkia/tokyo-night-vscode-theme
+  tokyo-night: &tokyo-night # Default colors
+    primary:
+      # background: "0x1a1b26"
+      # background: "0x222638"
+      background: "0x282A36"
+      foreground: "0xa9b1d6"
+
+    # Normal colors
+    normal:
+      black: "0x32344a"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xad8ee6"
+      cyan: "0x449dab"
+      white: "0x787c99"
+
+    # Bright colors
+    bright:
+      black: "0x444b6a"
+      red: "0xff7a93"
+      green: "0xb9f27c"
+      yellow: "0xff9e64"
+      blue: "0x7da6ff"
+      magenta: "0xbb9af7"
+      cyan: "0x0db9d7"
+      white: "0xacb0d0"
+
+  tokyo-night-storm: &tokyo-night-storm # Default colors
+    primary:
+      background: "0x24283b"
+      foreground: "0xa9b1d6"
+
+    # Normal colors
+    normal:
+      black: "0x32344a"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xad8ee6"
+      cyan: "0x449dab"
+      white: "0x9699a8"
+
+    # Bright colors
+    bright:
+      black: "0x444b6a"
+      red: "0xff7a93"
+      green: "0xb9f27c"
+      yellow: "0xff9e64"
+      blue: "0x7da6ff"
+      magenta: "0xbb9af7"
+      cyan: "0x0db9d7"
+      white: "0xacb0d0"
+
+  # Dracula theme for Alacritty
+  # https://draculatheme.com/alacritty
+  # https://spec.draculatheme.com
+  dracula: &dracula
+    primary:
+      background: "#282a36"
+      foreground: "#f8f8f2"
+      bright_foreground: "#ffffff"
+    cursor:
+      text: CellBackground
+      cursor: CellForeground
+    vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+    search:
+      matches:
+        foreground: "#44475a"
+        background: "#50fa7b"
+      focused_match:
+        foreground: "#44475a"
+        background: "#ffb86c"
+      footer_bar:
+        background: "#282a36"
+        foreground: "#f8f8f2"
+    hints:
+      start:
+        foreground: "#282a36"
+        background: "#f1fa8c"
+      end:
+        foreground: "#f1fa8c"
+        background: "#282a36"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: CellForeground
+      background: "#44475a"
+    normal:
+      black: "#21222c"
+      red: "#ff5555"
+      green: "#50fa7b"
+      yellow: "#f1fa8c"
+      blue: "#bd93f9"
+      magenta: "#ff79c6"
+      cyan: "#8be9fd"
+      white: "#f8f8f2"
+    bright:
+      black: "#6272a4"
+      red: "#ff6e6e"
+      green: "#69ff94"
+      yellow: "#ffffa5"
+      blue: "#d6acff"
+      magenta: "#ff92df"
+      cyan: "#a4ffff"
+      white: "#ffffff"
+
+colors: *dracula

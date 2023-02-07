@@ -1,0 +1,18 @@
+[submodule ".config/zsh/ohmyzsh"]
+	path = .config/zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".config/zsh/themes/powerlevel10k"]
+	path = .config/zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".config/zsh/plugins/alias-tips"]
+	path = .config/zsh/plugins/alias-tips
+	url = https://github.com/djui/alias-tips.git
+[submodule ".config/zsh/plugins/zsh-autocomplete"]
+	path = .config/zsh/plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
+[submodule ".config/zsh/plugins/zsh-autosuggestions"]
+	path = .config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/zsh/plugins/zsh-syntax-highlighting"]
+	path = .config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
