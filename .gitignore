@@ -1,2 +1,4 @@
 *.log
 scripts/sync*
+.config/tmux/plugins/
+.config/lazygit/state.yml
