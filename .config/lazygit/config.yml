@@ -8,3 +8,4 @@ git:
   paging:
     colorArg: never
     pager: delta --paging=never
+confirmOnQuit: true

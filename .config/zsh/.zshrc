@@ -23,6 +23,7 @@ plugins=(
 	git # version checking and aliases for everything related to git
 	globalias
 	vi-mode
+	ssh-agent
 	
 	# Custom Plugins
 	# auto-fortune-cowsay
