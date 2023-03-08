@@ -77,6 +77,8 @@ alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing p
 # alias sai="sudo apt install"
 # alias sas="sudo apt search"
 # alias saup="sudo apt update"
+# alias sarm="sudo apt purge"
+# alias sa="sudo apt"
 
 # Ownership
 alias own-code="sudo chown -R $(whoami) /usr/share/code-insiders"
@@ -113,14 +115,11 @@ alias nvide="neovide"
 # | wget -O siyuan.appimage -qi - --show-progress \
 # && echo "completed." \
 # && chmod u+x siyuan.appimage'
-alias kitty-update="cd ~/opt/bin/ \
-	&& curl -LO https://github.com/kovidgoyal/kitty/releases/download/nightly/kitty-nightly-x86_64.txz \
-	&& tar Jvxf kitty-nightly-x86_64.txz -C ./kitty \
-	&& rm kitty-nightly-x86_64.txz"
 alias gonvim-update="cd ~/opt/bin/ \
 	&& curl -LO https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-linux.tar.bz2 \
 	&& tar -xf goneovim-linux.tar.bz2 \
 	&& rm goneovim-linux.tar.bz2"
+alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 
 # $PATH  ======================================================================
 export PATH=$HOME/.local/bin:$PATH
