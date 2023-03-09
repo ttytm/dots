@@ -1,4 +1,5 @@
 gui:
+  scrollHeight: 10
   theme:
     activeBorderColor:
       - green
@@ -8,4 +9,3 @@ git:
   paging:
     colorArg: never
     pager: delta --paging=never
-confirmOnQuit: true
