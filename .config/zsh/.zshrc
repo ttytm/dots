@@ -24,7 +24,7 @@ plugins=(
 	globalias
 	vi-mode
 	ssh-agent
-	
+
 	# Custom Plugins
 	# auto-fortune-cowsay
 	alias-tips
@@ -89,6 +89,7 @@ alias code="codium"
 alias gnvim="sh ~/opt/scripts/gnvim.sh"
 alias kvim="kitty --detach --dump-commands nvim"
 alias nvide="neovide"
+alias dol="dolphin . & disown"
 
 # Updates (aka poor mans solution to pull updates directly from github releases)
 # alias nvim-update="cd ~/opt/appimages/ \
@@ -121,41 +122,12 @@ alias gonvim-update="cd ~/opt/bin/ \
 	&& rm goneovim-linux.tar.bz2"
 alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 
-# $PATH  ======================================================================
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/share/neovim/bin:$PATH
-export PATH=$HOME/.config/composer/vendor/bin/:$PATH
-# export PATH="$HOME/git/spotifyd/target/release/spotifyd:$PATH"
-# export PATH="$HOME/.local/share/flatpak/exports/bin:$PATH"
-
 # Node
-export NPM_PACKAGES="${HOME}/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
-export PATH="$PATH:$NPM_PACKAGES/bin:$PATH"
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
-export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # load nvm bash_completion
-
-# Rust
-source "$HOME/.cargo/env"
-export PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH
-
-# Scala
-export SPARK_HOME=$HOME/.local/share/spark
-export PATH=$HOME/.local/share/spark/bin:$PATH
-export PATH=$PATH:$HOME/.local/share/coursier/bin
-
-# Go
-export GOPATH=$HOME/.local/share/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-# Nim
-export PATH=$HOME/.nim/nim-1.6.10/bin:$PATH
-export PATH=$HOME/.nimble/bin:$PATH
 
 # Python
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # Haskell
-[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env" 
+[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
