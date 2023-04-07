@@ -12,7 +12,7 @@
 <summary><code>/etc/zsh/zshenv</code></summary>
 
 ```zsh
-export ZDOTDIR="$HOME"/.config/zsh
+export ZDOTDIR=$HOME/.config/zsh
 . $ZDOTDIR/.zshenv
 ```
 
