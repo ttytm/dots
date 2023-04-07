@@ -9,6 +9,7 @@ fi
 cd "$FONT_DIR"
 
 # Nerd Fonts
+# Requires `subversion`
 svn export https://github.com/ryanoasis/nerd-fonts/trunk/patched-fonts/JetBrainsMono/Ligatures JetBrainsNFM 
 svn export https://github.com/ryanoasis/nerd-fonts/trunk/patched-fonts/FantasqueSansMono FantasqueSansNFM
 
