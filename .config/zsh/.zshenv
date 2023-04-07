@@ -9,21 +9,22 @@ export GOPATH=$HOME/.local/share/go
 export SPARK_HOME=$HOME/.local/share/spark
 
 path+=(
+	# Misc
 	$HOME/.local/bin
-	# $HOME/.local/share/neovim/bin
-	$HOME/.config/composer/vendor/bin
 	$HOME/.vrd/bin
-	# "$HOME/git/spotifyd/target/release/spotifyd"
 	# "$HOME/.local/share/flatpak/exports/bin"
+	# "$HOME/git/spotifyd/target/release/spotifyd"
 	# Node
 	$NPM_PACKAGES/bin
-	# Rust
+	# Rust/Solana
 	$HOME/.local/share/solana/install/active_release/bin
+	# Go
+	$GOROOT/bin:$GOPATH/bin
 	# Scala
 	$HOME/.local/share/spark/bin
 	$HOME/.local/share/coursier/bin
-	# Go
-	$GOROOT/bin:$GOPATH/bin
+	# Php
+	$HOME/.config/composer/vendor/bin
 	# Nim
 	$HOME/.nimble/bin
 )
