@@ -2,3 +2,4 @@
 scripts/sync*
 .config/tmux/plugins/
 .config/lazygit/state.yml
+.zsh_history
