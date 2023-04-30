@@ -11,7 +11,7 @@ export SPARK_HOME=$HOME/.local/share/spark
 path+=(
 	# Misc
 	$HOME/.local/bin
-	$HOME/.vrd/bin
+	$HOME/.grd/bin
 	# "$HOME/.local/share/flatpak/exports/bin"
 	# "$HOME/git/spotifyd/target/release/spotifyd"
 	# Node
