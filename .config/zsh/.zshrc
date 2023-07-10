@@ -44,7 +44,7 @@ plugins=(
 # 	#local icur=$(zvm_cursor_style $ZVM_INSERT_MODE_CURSOR)
 # }
 
-KEYTIMEOUT=10 
+KEYTIMEOUT=10
 VI_MODE_SET_CURSOR=true
 # VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
@@ -72,6 +72,7 @@ alias nrt="npm run test"
 alias anlo="anchor localnet"
 alias anrt="anchor run test"
 alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing purposes)
+alias pn=pnpm
 
 # debian based systems
 # alias sai="sudo apt install"
@@ -121,13 +122,3 @@ alias gonvim-update="cd ~/opt/bin/ \
 	&& tar -xf goneovim-linux.tar.bz2 \
 	&& rm goneovim-linux.tar.bz2"
 alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
-
-# Node
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # load nvm bash_completion
-
-# Python
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-
-# Haskell
-[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
