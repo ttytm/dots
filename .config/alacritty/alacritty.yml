@@ -2,42 +2,33 @@
 
 window:
   opacity: 0.93
+  decorations: none
 
 # Font configuration
 font:
   normal:
-    family: JetBrains Mono Nerd Font
-    # family: FantasqueSansMono Nerd Font Mono
-    # style: Light
-
-  # possible to use different font families for bold/italic variants
-  # bold:
-  #   # family: Roboto Mono for Powerline
-  #   style: SemiBold
-  #
-  # italic:
-  #   # family: JetBrainsMono
-  #   style: Italic
+    family: JetBrains Mono Nerd Font Mono
+    # family: VictorMono Nerd Font Mono
+    # style: SemiBold
 
   bold_italic:
-    family: FantasqueSansMono Nerd Font Mono
+    family: Victor Mono Medium
     style: Italic
 
-  # Point size
-  size: 10
+  size: 13
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: 3
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
   glyph_offset:
     x: 0
-    y: 2
+    y: 1
 
 key_bindings:
   # (Windows, Linux, and BSD only)
@@ -48,6 +39,12 @@ key_bindings:
   - { key: Equals, mods: Control, action: ResetFontSize }
   - { key: Plus, mods: Control|Shift, action: IncreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 700
 
 schemes:
   # Tokyo Night theme, based on both:
