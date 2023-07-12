@@ -14,10 +14,7 @@ config = {
 		}, ]]
 		{
 			italic = false,
-			font = wezterm.font(
-				"JetBrainsMono Nerd Font Mono",
-				{ weight = "Light", harfbuzz_features = { "calt=0", "clig=0", "liga=0" } }
-			),
+			font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Light" }),
 		},
 		{
 			italic = true,
