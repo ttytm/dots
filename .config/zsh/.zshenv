@@ -30,19 +30,6 @@ path+=(
 	$HOME/.config/composer/vendor/bin
 	# == Nim
 	$HOME/.nimble/bin
+	# == Python
+	$HOME/miniconda3/bin
 )
-
-# Node
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
-
-# Rust
-source "$HOME/.cargo/env"
-
-# Python
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-
-# Haskell
-[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
-. "$HOME/.cargo/env"

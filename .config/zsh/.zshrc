@@ -31,20 +31,9 @@ plugins=(
 	zsh-autocomplete
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	# zsh-vi-mode # omz's internal vi-mode seems to be better atm
 )
 
-# zvm_config() {
-# 	ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
-# 	ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK
-# 	ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-# 	ZVM_VI_EDITOR=nvim
-# 	# cursor styles
-# 	#local ncur=$(zvm_cursor_style $ZVM_NORMAL_MODE_CURSOR)
-# 	#local icur=$(zvm_cursor_style $ZVM_INSERT_MODE_CURSOR)
-# }
-
-KEYTIMEOUT=10
+KEYTIMEOUT=15
 VI_MODE_SET_CURSOR=true
 # VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
@@ -75,11 +64,11 @@ alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing p
 alias pn=pnpm
 
 # debian based systems
-# alias sai="sudo apt install"
-# alias sas="sudo apt search"
-# alias saup="sudo apt update"
-# alias sarm="sudo apt purge"
-# alias sa="sudo apt"
+alias sai="sudo apt install"
+alias sas="sudo apt search"
+alias saup="sudo apt update"
+alias sarm="sudo apt purge"
+alias sa="sudo apt"
 
 # Ownership
 alias own-code="sudo chown -R $(whoami) /usr/share/code-insiders"
@@ -93,32 +82,26 @@ alias nvide="neovide"
 alias dol="dolphin . & disown"
 
 # Updates (aka poor mans solution to pull updates directly from github releases)
-# alias nvim-update="cd ~/opt/appimages/ \
-	# && curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage \
-	# && chmod u+x nvim.appimage"
 # alias wez-update="cd ~/opt/appimages/ \
 # 	&& curl -Lo wezterm.appimage https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu18.04.AppImage \
 # 	&& chmod u+x wezterm.appimage"
-# alias logseq-update='cd ~/opt/appimages/ \
-# && echo "downloading logseq latest release..." \
-# && curl -s https://api.github.com/repos/logseq/logseq/releases/latest \
-# | grep "browser_download_url.*AppImage" \
-# | cut -d : -f 2,3 \
-# | tr -d \" \
-# | wget -O logseq.appimage -qi - --show-progress \
-# && echo "completed." \
-# && chmod u+x logseq.appimage'
-# alias siyuan-update='cd ~/opt/appimages/ \
-# && echo "downloading siyuan latest release..." \
-# && curl -s https://api.github.com/repos/siyuan-note/siyuan/releases/latest \
-# | grep "browser_download_url.*AppImage" \
-# | cut -d : -f 2,3 \
-# | tr -d \" \
-# | wget -O siyuan.appimage -qi - --show-progress \
-# && echo "completed." \
-# && chmod u+x siyuan.appimage'
 alias gonvim-update="cd ~/opt/bin/ \
 	&& curl -LO https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-linux.tar.bz2 \
 	&& tar -xf goneovim-linux.tar.bz2 \
 	&& rm goneovim-linux.tar.bz2"
 alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
+
+# Envs  =======================================================================
+
+# Node
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Rust
+source "$HOME/.cargo/env"
+
+# Python
+[ -f /home/turiiya/miniconda3/etc/profile.d/conda.sh ] && source /home/turiiya/miniconda3/etc/profile.d/conda.sh
+
+# Haskell
+[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
