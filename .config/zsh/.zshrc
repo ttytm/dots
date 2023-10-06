@@ -54,14 +54,13 @@ bindkey '^F' autosuggest-accept
 # Aliases  ====================================================================
 # For a full list of active aliases, run `alias`.
 
-alias zshcfg="nvim ~/.config/zsh/.zshrc"
+alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias ywd="pwd | xclip -selection clipboard" # yank working directory
+alias nr="npm run"
 alias nrd="npm run dev"
-alias nrt="npm run test"
 alias anlo="anchor localnet"
 alias anrt="anchor run test"
 alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing purposes)
-alias pn=pnpm
 
 # debian based systems
 alias sai="sudo apt install"
@@ -71,11 +70,10 @@ alias sarm="sudo apt purge"
 alias sa="sudo apt"
 
 # Ownership
-alias own-code="sudo chown -R $(whoami) /usr/share/code-insiders"
-alias own-codium="sudo chown -R $(whoami) /opt/vscodium-bin"
+alias own-code="sudo chown -R $(whoami) $(which code)"
+alias own-codium="sudo chown -R $(whoami) $(which codium)"
 
 # Apps
-alias code="codium"
 alias gnvim="sh ~/opt/scripts/gnvim.sh"
 alias kvim="kitty --detach --dump-commands nvim"
 alias nvide="neovide"
