@@ -11,6 +11,9 @@ export SPARK_HOME=$HOME/.local/share/spark
 export VPM_NO_INCREMENT=1
 # == Mojo
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib/mojo
+# `find $(python3 -c 'import sysconfig; print(sysconfig.get_config_var("LIBDIR"))') -iname 'libpython*.[s,d]*' | sort -r | head -n 1`
+export MOJO_PYTHON_LIBRARY=/usr/lib/libpython3.so
+export SPAWN_ROOT=/home/t/Git/spawn
 
 path+=(
 	# == Misc
@@ -37,3 +40,4 @@ path+=(
 	$HOME/.modular/pkg/packages.modular.com_mojo/bin/
 )
 
+. "$HOME/.cargo/env"

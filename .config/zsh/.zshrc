@@ -30,6 +30,7 @@ plugins=(
 	alias-tips
 	zsh-autocomplete
 	zsh-autosuggestions
+	zsh-completions
 	zsh-syntax-highlighting
 )
 
@@ -54,6 +55,7 @@ bindkey '^F' autosuggest-accept
 # Aliases  ====================================================================
 # For a full list of active aliases, run `alias`.
 
+alias n="nvim"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias ywd="pwd | xclip -selection clipboard" # yank working directory
 alias nr="npm run"
@@ -61,23 +63,30 @@ alias nrd="npm run dev"
 alias anlo="anchor localnet"
 alias anrt="anchor run test"
 alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing purposes)
-
-# debian based systems
-alias sai="sudo apt install"
-alias sas="sudo apt search"
-alias saup="sudo apt update"
-alias sarm="sudo apt purge"
-alias sa="sudo apt"
+alias gclf="git clone --recursive --shallow-submodules --filter=blob:none --also-filter-submodules" # TODO: contrib to omz
+alias ls="lsd"
 
 # Ownership
-alias own-code="sudo chown -R $(whoami) $(which code)"
+# alias own-code="sudo chown -R $(whoami) $(which code)"
+alias own-code="sudo chown -R $(whoami) /opt/visual-studio-code"
 alias own-codium="sudo chown -R $(whoami) $(which codium)"
 
 # Apps
-alias gnvim="sh ~/opt/scripts/gnvim.sh"
 alias kvim="kitty --detach --dump-commands nvim"
-alias nvide="neovide"
-alias dol="dolphin . & disown"
+alias dol="nohup dolphin"
+alias sp="spawnc"
+
+# Debian based systems.
+if [ -f /etc/debian_version ]; then
+	# APT commands.
+	alias sai="sudo apt install"
+	alias sas="sudo apt search"
+	alias saup="sudo apt update"
+	alias sarm="sudo apt purge"
+	alias sa="sudo apt"
+
+	alias bat="batcat"
+fi
 
 # Updates (aka poor mans solution to pull updates directly from github releases)
 # alias wez-update="cd ~/opt/appimages/ \
@@ -92,8 +101,8 @@ alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /d
 # Envs  =======================================================================
 
 # Node
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 # Rust
 source "$HOME/.cargo/env"
@@ -103,3 +112,24 @@ source "$HOME/.cargo/env"
 
 # Haskell
 [ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
+
+# V
+# compdef v
+# _v() {
+# 	local src
+# 	# Send all words up to the word the cursor is currently on
+# 	src=$(/home/turiiya/Dev/vlang/v/v complete zsh $(printf "%s\n" ${(@)words[1,$CURRENT]}))
+# 	if [[ $? == 0 ]]; then
+# 		eval ${src}
+# 		#echo ${src}
+# 	fi
+# }
+# compdef _v v
+
+# bun completions
+[ -s "/home/t/.bun/_bun" ] && source "/home/t/.bun/_bun"
+
+# To customize prompt, run `p10k configure` or edit ~/Dev/dots/.config/zsh/.p10k.zsh.
+[[ ! -f ~/Dev/dots/.config/zsh/.p10k.zsh ]] || source ~/Dev/dots/.config/zsh/.p10k.zsh
+
+eval "$(atuin init zsh)"
