@@ -53,28 +53,32 @@ unset zle_bracketed_paste
 bindkey '^F' autosuggest-accept
 
 # Aliases  ====================================================================
-# For a full list of active aliases, run `alias`.
 
-alias n="nvim"
-alias zshrc="nvim ~/.config/zsh/.zshrc"
-alias ywd="pwd | xclip -selection clipboard" # yank working directory
-alias nr="npm run"
-alias nrd="npm run dev"
+# For a full list of active aliases, run `alias`.
 alias anlo="anchor localnet"
 alias anrt="anchor run test"
-alias bright\?="ddcutil --bus 13 getvcp 10  " # get screen brightness (testing purposes)
-alias gclf="git clone --recursive --shallow-submodules --filter=blob:none --also-filter-submodules" # TODO: contrib to omz
-alias ls="lsd"
+alias fjq='true | fzf  --preview-window="border-none" --preview="jq -C {q} < *.json"'
+alias kvim="kitty --detach --dump-commands nvim"
+alias kitrc="nvim ~/.config/kitty/kitty.conf"
+alias kw="kwrite"
+alias l="lsd -lahg"
+alias n="nvim"
 
-# Ownership
+alias t='projectdo test'
+alias r='projectdo run'
+alias b='projectdo build'
+alias p='projectdo tool'
+
+alias slumb='slumber -f ~/.config/slumber/slumber.yml'
+alias sp="spawnc"
+alias open="xdg-open"
 # alias own-code="sudo chown -R $(whoami) $(which code)"
 alias own-code="sudo chown -R $(whoami) /opt/visual-studio-code"
 alias own-codium="sudo chown -R $(whoami) $(which codium)"
+alias ywd="pwd | xclip -selection clipboard" # yank working directory
+alias zshrc="nvim ~/.config/zsh/.zshrc"
+alias c3="c3c"
 
-# Apps
-alias kvim="kitty --detach --dump-commands nvim"
-alias dol="nohup dolphin"
-alias sp="spawnc"
 
 # Debian based systems.
 if [ -f /etc/debian_version ]; then
@@ -113,6 +117,9 @@ source "$HOME/.cargo/env"
 # Haskell
 [ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
 
+# VMR
+[ -z "$VM_DISABLE" ] && source ~/.vmr/vmr.sh
+
 # V
 # compdef v
 # _v() {
@@ -132,4 +139,4 @@ source "$HOME/.cargo/env"
 # To customize prompt, run `p10k configure` or edit ~/Dev/dots/.config/zsh/.p10k.zsh.
 [[ ! -f ~/Dev/dots/.config/zsh/.p10k.zsh ]] || source ~/Dev/dots/.config/zsh/.p10k.zsh
 
-eval "$(atuin init zsh)"
+eval $(opam env)
