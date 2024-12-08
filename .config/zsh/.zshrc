@@ -91,6 +91,9 @@ source /usr/share/nvm/init-nvm.sh
 # Rust
 source "$HOME/.cargo/env"
 
+# OCaml
+eval $(opam env)
+
 # Python
 [ -f /home/turiiya/miniconda3/etc/profile.d/conda.sh ] && source /home/turiiya/miniconda3/etc/profile.d/conda.sh
 
@@ -100,20 +103,5 @@ source "$HOME/.cargo/env"
 # VMR
 [ -z "$VM_DISABLE" ] && source ~/.vmr/vmr.sh
 
-# V
-# compdef v
-# _v() {
-# 	local src
-# 	# Send all words up to the word the cursor is currently on
-# 	src=$(/home/turiiya/Dev/vlang/v/v complete zsh $(printf "%s\n" ${(@)words[1,$CURRENT]}))
-# 	if [[ $? == 0 ]]; then
-# 		eval ${src}
-# 		#echo ${src}
-# 	fi
-# }
-# compdef _v v
-
-# bun completions
+# Bun completions
 [ -s "/home/t/.bun/_bun" ] && source "/home/t/.bun/_bun"
-
-eval $(opam env)
