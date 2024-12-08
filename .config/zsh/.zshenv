@@ -1,3 +1,14 @@
+# == ZSH
+export ZSH="$HOME/.config/zsh/ohmyzsh" # path to zsh installation
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST # do not compdump directly into config dir
+
+# == Misc
+export SUDO_ASKPASS=/usr/bin/ksshaskpass
+export EDITOR="nvim"
+export PAGER=bat
+export ZED_WINDOW_DECORATIONS=server
+export FX_SHOW_SIZE=true
+
 # == JS/TS
 export BUN_INSTALL="$HOME/.bun"
 export NPM_PACKAGES="${HOME}/.npm-packages"
@@ -20,9 +31,7 @@ export JAVA_HOME=$(realpath $(which java) | sed 's/\/bin\/.*//')
 # export PATH="$PATH:$HOME/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.23%252B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.23_9.tar.gz/jdk-11.0.23+9/bin"
 # == Spawn
 export SPAWN_ROOT=$HOME/Git/Spawn/spawn
-# == Misc
-export ZED_WINDOW_DECORATIONS=server
-export FX_SHOW_SIZE=true
+# == Onyx
 export ONYX_PATH=$HOME/.onyx
 
 path+=(

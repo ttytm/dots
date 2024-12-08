@@ -1,15 +1,8 @@
-# Ref.: ./.oh-my-zsh/templates/zshrc.zsh-template
-
-
-# path to zsh installation
-export ZSH="$HOME/.config/zsh/ohmyzsh"
-# do not compdump directly into config dir
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
+# Ref.: ~/.config/zsh/ohmyzsh/templates/zshrc.zsh-template
 ZSH_CUSTOM=$ZDOTDIR
 eval "$(starship init zsh)"
 
-# Plugins  ===================================================================
+# Plugins  ====================================================================
 plugins=(
 	# OMZ plugins
 	git # version checking and aliases for everything related to git
@@ -34,9 +27,6 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 source $ZSH/oh-my-zsh.sh
 
 # Start Potential Overwrites ==================================================
-# Misc
-export EDITOR="nvim"
-export SUDO_ASKPASS=/usr/bin/ksshaskpass
 unset zle_bracketed_paste
 
 # Keymaps
