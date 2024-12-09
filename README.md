@@ -8,12 +8,16 @@
 
 ## Install notes
 
-<details>
-<summary><code>/etc/zsh/zshenv</code></summary>
+```sh
+git clone --recursive --shallow-submodules \
+  --filter=blob:none --also-filter-submodules \
+  https://github.com/ttytm/dots
+```
 
-```zsh
+Set the `ZDOTDIR`. E.g. if zsh is installed via pacman:
+
+```sh
+# /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
 . $ZDOTDIR/.zshenv
 ```
-
-</details>
