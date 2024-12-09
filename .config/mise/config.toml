@@ -1,0 +1,10 @@
+[tools]
+"aqua:astral-sh/uv" = "latest"
+"asdf:jtakakura/asdf-onyx" = "latest"
+bun = "1.1.38"
+node = "22"
+python = "3.11"
+rust = "latest"
+"ubi:coursier/coursier" = "latest"
+usage = "latest"
+zig = "latest"
