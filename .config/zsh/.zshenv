@@ -1,13 +1,10 @@
-# == ZSH
-export ZSH="$HOME/.config/zsh/ohmyzsh" # path to zsh installation
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST # do not compdump directly into config dir
-
 # == Misc
-export SUDO_ASKPASS=/usr/bin/ksshaskpass
 export EDITOR="nvim"
 export PAGER=bat
-export ZED_WINDOW_DECORATIONS=server
+export SUDO_ASKPASS=/usr/bin/ksshaskpass
 export FX_SHOW_SIZE=true
+export ZED_WINDOW_DECORATIONS=server
+export ZSH_COMPDUMP=$HOME/.cache/zsh/.zcompdump # do not compdump directly into config dir
 
 # == JS/TS
 export BUN_INSTALL="$HOME/.bun"
