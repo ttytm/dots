@@ -2,17 +2,15 @@
 ZSH_CUSTOM=$ZDOTDIR
 eval "$(starship init zsh)"
 
-# Plugins  ====================================================================
+## Plugins ====================================================================
 plugins=(
-	# OMZ plugins
-	git # version checking and aliases for everything related to git
+	# OMZ
+	git
 	globalias
+	mise
 	vi-mode
 	ssh-agent
-	mise
-
-	# Custom Plugins
-	# auto-fortune-cowsay
+	# Custom
 	alias-tips
 	zsh-autocomplete
 	zsh-autosuggestions
@@ -24,61 +22,64 @@ KEYTIMEOUT=15
 VI_MODE_SET_CURSOR=true
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
-# Source "Defaults" ===========================================================
+## Source OMZ to load "defaults" and plugins, then start potential "overwrites"
 source $ZSH/oh-my-zsh.sh
 
-# Start Potential Overwrites ==================================================
-unset zle_bracketed_paste
+## General ====================================================================
 
-# Keymaps
+unset zle_bracketed_paste
 bindkey '^F' autosuggest-accept
 
-# Aliases  ====================================================================
+## Aliases ====================================================================
+# For a full list of active aliases, run `alias`
 
-# For a full list of active aliases, run `alias`.
-alias anlo="anchor localnet"
-alias anrt="anchor run test"
-alias fjq='true | fzf  --preview-window="border-none" --preview="jq -C {q} < *.json"'
-alias kvim="kitty --detach --dump-commands nvim"
-alias kitrc="nvim ~/.config/kitty/kitty.conf"
-alias kw="kwrite"
-alias l="lsd -lahg"
-alias n="nvim"
+# Config
+alias zshrc="$EDITOR ~/.config/zsh/.zshrc"
+alias kitrc="$EDITOR ~/.config/kitty/kitty.conf"
 
+# Devtools
 alias t='projectdo test'
 alias r='projectdo run'
 alias b='projectdo build'
 alias p='projectdo tool'
-
-alias slumb='slumber -f ~/.config/slumber/slumber.yml'
-alias sp="spawnc"
-alias open="xdg-open"
-# alias own-code="sudo chown -R $(whoami) $(which code)"
-alias own-code="sudo chown -R $(whoami) /opt/visual-studio-code"
-alias own-codium="sudo chown -R $(whoami) $(which codium)"
-alias ywd="pwd | xclip -selection clipboard" # yank working directory
-alias zshrc="nvim ~/.config/zsh/.zshrc"
+alias anlo="anchor localnet"
+alias anrt="anchor run test"
 alias c3="c3c"
 
+# Programs
+alias n="nvim"
+alias kvim="kitty --detach --dump-commands nvim"
+alias slumb='slumber -f ~/.config/slumber/slumber.yml'
 
-# Debian based systems.
+# Utilities
+alias l="lsd -lahg"
+alias open="xdg-open"
+alias fjq='true | fzf --preview-window="border-none" --preview="jq -C {q} < *.json"'
+alias ywd="pwd | xclip -selection clipboard" # Yank working directory
+alias own-code="sudo chown -R $(whoami) $(which code)"
+alias own-codium="sudo chown -R $(whoami) $(which codium)"
+
+# Debian-based
 if [ -f /etc/debian_version ]; then
-	# APT commands.
+	# APT commands
 	alias sai="sudo apt install"
 	alias sas="sudo apt search"
 	alias saup="sudo apt update"
 	alias sarm="sudo apt purge"
 	alias sa="sudo apt"
-
+	#
 	alias bat="batcat"
 fi
 
-# Envs  =======================================================================
+## Environment Extensions =====================================================
 
+# Mise
 eval "$($HOME/.local/bin/mise activate zsh)"
-
-# Dynamically source auto completions.
-command -v bun > /dev/null 2>&1 && source <(eval "bun completions | tee")
 
 # Rust
 source "$HOME/.cargo/env"
+
+## Auto Completions ===========================================================
+
+# Bun
+command -v bun > /dev/null 2>&1 && source <(eval "bun completions | tee") # Dynamically sourced
