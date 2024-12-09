@@ -76,9 +76,6 @@ fi
 # Mise
 eval "$($HOME/.local/bin/mise activate zsh)"
 
-# Rust
-source "$HOME/.cargo/env"
-
 ## Auto Completions ===========================================================
 
 # Bun
