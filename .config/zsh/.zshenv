@@ -38,7 +38,6 @@ path+=(
 	# == Misc
 	$HOME/.local/bin
 	$HOME/.rod/bin
-	$HOME/.vmr/bin
 	# == JS/TS
 	$BUN_INSTALL/bin
 	$NPM_PACKAGES/bin

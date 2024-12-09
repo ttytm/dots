@@ -100,8 +100,5 @@ eval $(opam env)
 # Haskell
 [ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
 
-# VMR
-[ -z "$VM_DISABLE" ] && source ~/.vmr/vmr.sh
-
 # Bun completions
 [ -s "/home/t/.bun/_bun" ] && source "/home/t/.bun/_bun"
