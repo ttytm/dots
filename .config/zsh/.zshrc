@@ -72,16 +72,6 @@ if [ -f /etc/debian_version ]; then
 	alias bat="batcat"
 fi
 
-# Updates (aka poor mans solution to pull updates directly from github releases)
-# alias wez-update="cd ~/opt/appimages/ \
-# 	&& curl -Lo wezterm.appimage https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu18.04.AppImage \
-# 	&& chmod u+x wezterm.appimage"
-alias gonvim-update="cd ~/opt/bin/ \
-	&& curl -LO https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-linux.tar.bz2 \
-	&& tar -xf goneovim-linux.tar.bz2 \
-	&& rm goneovim-linux.tar.bz2"
-alias kitty-update="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
-
 # Envs  =======================================================================
 
 # Node
