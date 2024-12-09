@@ -9,6 +9,7 @@ plugins=(
 	globalias
 	vi-mode
 	ssh-agent
+	mise
 
 	# Custom Plugins
 	# auto-fortune-cowsay
@@ -74,21 +75,10 @@ fi
 
 # Envs  =======================================================================
 
-# Node
-source /usr/share/nvm/init-nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+eval "$($HOME/.local/bin/mise activate zsh)"
+
+# Dynamically source auto completions.
+command -v bun > /dev/null 2>&1 && source <(eval "bun completions | tee")
 
 # Rust
 source "$HOME/.cargo/env"
-
-# OCaml
-eval $(opam env)
-
-# Python
-[ -f /home/turiiya/miniconda3/etc/profile.d/conda.sh ] && source /home/turiiya/miniconda3/etc/profile.d/conda.sh
-
-# Haskell
-[ -f "/home/turiiya/.ghcup/env" ] && source "/home/turiiya/.ghcup/env"
-
-# Bun completions
-[ -s "/home/t/.bun/_bun" ] && source "/home/t/.bun/_bun"
