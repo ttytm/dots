@@ -11,11 +11,6 @@ export ZED_WINDOW_DECORATIONS=server
 ## Devtools
 # JVM (Java, Scala etc.)
 export JAVA_HOME=$(realpath $(which java) | sed 's/\/bin\/.*//')
-# Mojo
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib/mojo
-# `find $(python3 -c 'import sysconfig; print(sysconfig.get_config_var("LIBDIR"))') -iname 'libpython*.[s,d]*' | sort -r | head -n 1`
-# export MOJO_PYTHON_LIBRARY=/usr/lib/libpython3.so
-export LD_LIBRARY_PATH=$HOME/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 # Onyx
 export ONYX_PATH=$HOME/.onyx
 # V
