@@ -1,6 +1,5 @@
 ## Misc
 export EDITOR="nvim"
-export PAGER=bat
 export SUDO_ASKPASS=/usr/bin/ksshaskpass
 export ZSH_COMPDUMP=$HOME/.cache/zsh/.zcompdump # Do not compdump directly into zsh config dir
 export VPM_NO_INCREMENT=1 # Disable download count incrementing on vpm.vlang.io (e.g., mostly while running `v install` during tests)
