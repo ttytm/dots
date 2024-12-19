@@ -51,13 +51,14 @@ alias n="nvim"
 alias kvim="kitty --detach --dump-commands nvim"
 alias slumb='slumber -f ~/.config/slumber/slumber.yml'
 
-# Utilities
+# Utility
 alias l="lsd -lahg"
 alias open="xdg-open"
 alias fjq='true | fzf --preview-window="border-none" --preview="jq -C {q} < *.json"'
 alias ywd="pwd | xclip -selection clipboard" # Yank working directory
 alias own-code="sudo chown -R $(whoami) $(which code)"
 alias own-codium="sudo chown -R $(whoami) $(which codium)"
+alias nix-shell="nix-shell --run zsh"
 
 # Debian-based
 if [ -f /etc/debian_version ]; then
@@ -69,6 +70,7 @@ if [ -f /etc/debian_version ]; then
 	alias sa="sudo apt"
 	#
 	alias bat="batcat"
+	alias fd="fdfind"
 fi
 
 ## Environment Extensions =====================================================
