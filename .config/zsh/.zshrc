@@ -55,7 +55,7 @@ alias slumb='slumber -f ~/.config/slumber/slumber.yml'
 alias l="lsd -lahg"
 alias open="xdg-open"
 alias fjq='true | fzf --preview-window="border-none" --preview="jq -C {q} < *.json"'
-alias ywd="pwd | xclip -selection clipboard" # Yank working directory
+alias ywd="pwd | wl-copy" # Yank working directory
 alias own-code="sudo chown -R $(whoami) $(which code)"
 alias own-codium="sudo chown -R $(whoami) $(which codium)"
 alias nix-shell="nix-shell --run zsh"
