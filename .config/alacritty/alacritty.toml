@@ -80,16 +80,12 @@ shape = "Block"
 [font]
 size = 12
 
-[font.bold_italic]
-family = "Victor Mono Medium"
-style = "Italic"
-
 [font.glyph_offset]
 x = 0
 y = 2
 
 [font.normal]
-family = "JetBrains Mono NFM"
+family = "Maple Mono NF"
 
 [font.offset]
 x = 0
