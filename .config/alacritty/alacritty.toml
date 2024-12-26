@@ -23,10 +23,6 @@ red = "#ff6e6e"
 white = "#ffffff"
 yellow = "#ffffa5"
 
-[colors.cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
 [colors.hints.end]
 background = "#282a36"
 foreground = "#f1fa8c"
@@ -64,21 +60,13 @@ foreground = "#44475a"
 
 [colors.selection]
 background = "#44475a"
-text = "CellForeground"
-
-[colors.vi_mode_cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
-[cursor]
-blink_interval = 700
 
 [cursor.style]
 blinking = "Always"
 shape = "Block"
 
 [font]
-size = 12
+size = 12.5
 
 [font.glyph_offset]
 x = 0
@@ -92,6 +80,6 @@ x = 0
 y = 3
 
 [window]
-opacity = 0.93
+opacity = 0.94
 
 [keyboard]
