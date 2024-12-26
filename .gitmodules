@@ -19,3 +19,6 @@
 [submodule ".config/zsh/plugins/zsh-completions"]
 	path = .config/zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:tenxsoydev/nxvim.git
